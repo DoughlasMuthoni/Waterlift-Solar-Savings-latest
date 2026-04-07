@@ -1,0 +1,48 @@
+:root {
+  /* ── Core Palette ── */
+  --color-primary:       #262161;
+  --color-primary-dark:  #1a1745;
+  --color-primary-light: #3730a3;
+  --color-accent:        #EF6922;
+  --color-accent-dark:   #d4581a;
+  --color-accent-light:  #f5883f;
+  --color-white:         #ffffff;
+  --color-light:         #f8f9ff;
+  --color-light-2:       #eef0fa;
+  --color-gray:          #6b7280;
+  --color-gray-light:    #9ca3af;
+  --color-dark:          #111827;
+  --color-border:        rgba(38,33,97,0.10);
+
+  /* ── Gradients ── */
+  --gradient-primary:    linear-gradient(135deg, #262161 0%, #1a1745 100%);
+  --gradient-primary-2:  linear-gradient(135deg, #262161 0%, #3730a3 100%);
+  --gradient-accent:     linear-gradient(135deg, #EF6922 0%, #f5883f 100%);
+  --gradient-hero:       linear-gradient(160deg, rgba(38,33,97,0.88) 0%, rgba(26,23,69,0.93) 100%);
+  --gradient-section:    linear-gradient(145deg, #f8f9ff 0%, #eef0fa 100%);
+  --gradient-card-hover: linear-gradient(145deg, #ffffff 0%, #f8f9ff 100%);
+
+  /* ── Typography ── */
+  --font-stack:    Arial, Helvetica, ui-sans-serif, sans-serif;
+  --font-heading:  Georgia, 'Times New Roman', serif;
+
+  /* ── Shape ── */
+  --border-radius:    12px;
+  --border-radius-sm: 8px;
+  --border-radius-lg: 20px;
+  --border-radius-xl: 28px;
+
+  /* ── Shadows ── */
+  --shadow-xs:  0 1px 2px rgba(38,33,97,0.06);
+  --shadow-sm:  0 2px 8px rgba(38,33,97,0.08),  0 1px 3px rgba(38,33,97,0.05);
+  --shadow-md:  0 6px 24px rgba(38,33,97,0.12),  0 2px 8px rgba(38,33,97,0.07);
+  --shadow-lg:  0 16px 48px rgba(38,33,97,0.16), 0 6px 16px rgba(38,33,97,0.09);
+  --shadow-xl:  0 24px 64px rgba(38,33,97,0.22), 0 8px 24px rgba(38,33,97,0.12);
+  --shadow-accent: 0 8px 32px rgba(239,105,34,0.35);
+  --shadow-glow:   0 0 40px rgba(239,105,34,0.20);
+
+  /* ── Motion ── */
+  --transition:       all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:  all 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast:  all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,17 @@
+Options -Indexes
+RewriteEngine On
+
+# Route all API requests through index.php (replaces the PHP built-in server router)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+
+# Block direct access to sensitive files
+<FilesMatch "\.(env|sql|log|sh|bat|md)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# CORS headers for preflight
+Header always set Access-Control-Allow-Methods "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+Header always set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With"
