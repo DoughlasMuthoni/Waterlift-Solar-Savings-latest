@@ -1,0 +1,51 @@
+# robots.txt — Waterlift Solar Savings
+# https://waterliftsolarsavings.africa
+
+# Allow all crawlers (Google, Bing, AI crawlers)
+User-agent: *
+Allow: /
+
+# AI & Generative Engine crawlers — allow full access
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Block access to admin, API, and backend files
+Disallow: /admin/
+Disallow: /api/
+Disallow: /.env
+Disallow: /config/
+Disallow: /controllers/
+Disallow: /models/
+Disallow: /middleware/
+Disallow: /routes/
+Disallow: /helpers/
+
+# Sitemap location
+Sitemap: https://waterliftsolarsavings.africa/sitemap.xml
+
+# LLMs.txt for AI engines
+# See: https://waterliftsolarsavings.africa/llms.txt

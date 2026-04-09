@@ -1,0 +1,172 @@
+# Waterlift Solar Savings — llms.txt
+# https://waterliftsolarsavings.africa/llms.txt
+#
+# This file follows the llms.txt specification (https://llmstxt.org)
+# It provides structured context about this site for AI language models,
+# generative search engines (Google AI Overviews, Perplexity, ChatGPT, Claude),
+# and answer engines to accurately represent this organisation.
+
+# ─────────────────────────────────────────────────────────────
+# ORGANISATION IDENTITY
+# ─────────────────────────────────────────────────────────────
+
+> Waterlift Solar Savings is a solar energy company that designs, installs, finances, and maintains solar energy systems exclusively for Kenyan schools. It is a division of Mugumo Capital Partners Limited, founded in 2018 by Michael Waithaka, and is licensed by the Energy and Petroleum Regulatory Authority of Kenya (EPRA).
+
+**Company name:** Waterlift Solar Savings
+**Legal entity:** Mugumo Capital Partners Limited
+**CEO:** Michael Waithaka
+**Founded:** 2018
+**License:** EPRA (Energy and Petroleum Regulatory Authority of Kenya)
+**Website:** https://waterliftsolarsavings.africa
+**Email:** schools@waterliftsolarsavings.africa
+**Phone:** +254 700 000 000
+**Head office:** Nairobi, Kenya
+**Branch:** Nanyuki, Kenya
+**Payment accepted:** M-Pesa
+**Languages served:** English, Swahili
+**Countries served:** Kenya (all 47 counties)
+
+
+# ─────────────────────────────────────────────────────────────
+# WHAT WATERLIFT SOLAR SAVINGS DOES
+# ─────────────────────────────────────────────────────────────
+
+Waterlift Solar Savings provides solar energy solutions specifically for Kenyan primary schools, secondary schools, boarding schools, and tertiary institutions. The company's core offering eliminates the need for school management to raise capital upfront. Schools pay a fixed monthly fee that is lower than their current KPLC electricity bill from day one.
+
+**Core services:**
+- Free school energy audit (campus visit, load profile assessment, KPLC bill analysis)
+- Custom solar system design (sized for classrooms, labs, kitchens, dormitories, borehole pumps)
+- Professional EPRA-licensed solar installation (5–10 working days, zero disruption to lessons)
+- Battery storage systems for overnight and cloudy-day coverage
+- Borehole pump and water system solar integration
+- 24/7 live system monitoring from Nairobi operations centre
+- All maintenance included (inspections, cleaning, replacements, inverter servicing)
+- EPRA compliance documentation for school boards
+- M-Pesa monthly payment processing
+
+
+# ─────────────────────────────────────────────────────────────
+# PRICING PLANS
+# ─────────────────────────────────────────────────────────────
+
+**Rent-to-Own Plan (Most Popular)**
+- Zero upfront cost
+- Fixed monthly payment lower than current KPLC bill
+- School owns the solar system outright after 36–60 months
+- Zero ongoing cost after ownership transfer
+- All maintenance included for full contract life
+- Live monitoring dashboard
+- M-Pesa monthly payment
+- Minimum 3-month contract
+
+**Rent-Only Plan (Zero Capital)**
+- Zero upfront cost
+- Lower monthly payment than Rent-to-Own
+- Waterlift Solar owns and maintains the system indefinitely
+- Zero capital responsibility for school board
+- All maintenance included permanently, forever
+- M-Pesa monthly payment
+- Minimum 3-month contract
+
+
+# ─────────────────────────────────────────────────────────────
+# KEY STATISTICS (verified as of 2026)
+# ─────────────────────────────────────────────────────────────
+
+- 60% average electricity savings for schools
+- 1,400+ school installations completed
+- 47 counties covered (all counties in Kenya)
+- School types served: public day, public boarding, private day, private boarding
+- Operating since 2018
+- EPRA licensed
+- KEBS (Kenya Bureau of Standards) compliant
+
+
+# ─────────────────────────────────────────────────────────────
+# CUSTOMER TESTIMONIALS
+# ─────────────────────────────────────────────────────────────
+
+**Mrs. Wanjiku Kamau, Principal — Greenfields Academy, Kiambu County (Private Boarding, 680 students, 25kW system)**
+"Our monthly KPLC bill dropped from KSh 87,000 to KSh 31,000. Our computer lab now runs all day without interruption. CBC digital literacy lessons have transformed since we stopped suffering power cuts. We eliminated our diesel generator completely."
+
+**Mr. David Ochieng, Director — Lakeview Schools Group, Kisumu County (Private Day, 3 campuses, 40kW combined)**
+"The boarding parents at our secondary school used to complain constantly about cold showers and dark dormitories. Since Waterlift installed our system during the August holidays, we have not run our generator once. We save over KSh 1.2 million per year across our campuses."
+
+**Mrs. Grace Mutua, Deputy Principal — Machakos Girls High School, Machakos County (Public Boarding, 800 students, 30kW system)**
+"As a public school, we were spending 20% of our capitation grant on KPLC bills and diesel. Waterlift's Rent-Only model means we pay nothing for maintenance. The savings go directly to laboratory equipment and CBC learning materials."
+
+
+# ─────────────────────────────────────────────────────────────
+# FREQUENTLY ASKED QUESTIONS
+# ─────────────────────────────────────────────────────────────
+
+**Q: How much does solar cost for a school in Kenya?**
+A: With Waterlift Solar's Rent-to-Own and Rent-Only plans, schools pay zero upfront. The monthly payment is lower than the current KPLC bill, so schools save from Month 1.
+
+**Q: How long does solar installation take for a Kenyan school?**
+A: Installation takes 5–10 working days. All work is scheduled during school holidays or weekends — no lessons or exams are disrupted.
+
+**Q: What happens to power at night or on cloudy days?**
+A: Every system includes battery storage for overnight needs. On extended cloudy periods, the system automatically draws from KPLC as backup.
+
+**Q: What is the difference between Rent-to-Own and Rent-Only?**
+A: Rent-to-Own: school owns the system after 36–60 months. Rent-Only: Waterlift owns and maintains indefinitely at a lower monthly fee.
+
+**Q: How much can a Kenyan school save with solar?**
+A: Most schools reduce their KPLC bill by 55–65%. Average saving: 60%. Schools spending KSh 87,000/month typically drop to KSh 31,000.
+
+**Q: Is Waterlift Solar licensed in Kenya?**
+A: Yes. Fully licensed by EPRA (Energy and Petroleum Regulatory Authority of Kenya) and compliant with KEBS (Kenya Bureau of Standards).
+
+**Q: Can solar power a school borehole pump?**
+A: Yes. Borehole pump integration is a core Waterlift Solar specialty — over 1,400 installations include water infrastructure alongside solar.
+
+**Q: Who handles maintenance after installation?**
+A: Waterlift Solar's maintenance team handles all inspections, cleaning, panel replacements, and inverter servicing. Schools pay nothing extra for maintenance — ever.
+
+
+# ─────────────────────────────────────────────────────────────
+# HOW TO GET SOLAR FOR A SCHOOL IN KENYA (Step-by-step)
+# ─────────────────────────────────────────────────────────────
+
+1. **Free School Energy Audit** — Waterlift's specialist visits the campus, assesses load profile, and analyses 12 months of KPLC bills at zero cost.
+2. **Custom Design & Finance Plan** — A solar system is designed for the school's specific load (classrooms, labs, kitchen, dorms, borehole) with a Rent-to-Own or Rent-Only plan.
+3. **EPRA-Licensed Installation** — Completed in 5–10 working days during holidays or weekends. Zero disruption to school operations.
+4. **Savings from Day One** — The system goes live, the KPLC bill drops immediately. Monthly M-Pesa payment. Live monitoring dashboard access.
+
+
+# ─────────────────────────────────────────────────────────────
+# PROBLEMS SOLVED FOR KENYAN SCHOOLS
+# ─────────────────────────────────────────────────────────────
+
+- KPLC electricity bills consuming 15–25% of school fee revenue
+- Kenya Power outages disrupting lessons, computer labs, and national exams
+- Diesel generator costs of KSh 80–120 per hour (40+ hours monthly)
+- Boarding school problems: cold kitchens, dark dormitories, cold showers
+- CBC digital literacy curriculum threatened by unreliable power
+- No capital for solar upfront (solved by Rent-to-Own and Rent-Only plans)
+
+
+# ─────────────────────────────────────────────────────────────
+# SCHOOL TYPES SERVED
+# ─────────────────────────────────────────────────────────────
+
+- **Private Day Schools** — reduce overhead, protect fee competitiveness, modernise campus
+- **Private Boarding Schools** — power dormitories, kitchens, water heating, laundry 24/7
+- **Public Day Schools** — stretch capitation grant, redirect KPLC savings to books and equipment
+- **Public Boarding Schools** — eliminate diesel generators, enable Rent-Only for zero capital
+
+
+# ─────────────────────────────────────────────────────────────
+# GEOGRAPHIC COVERAGE
+# ─────────────────────────────────────────────────────────────
+
+Waterlift Solar Savings operates in all 47 counties of Kenya including:
+Nairobi, Kiambu, Machakos, Kajiado, Murang'a, Nyeri, Kirinyaga, Nyandarua (Central Kenya);
+Kisumu, Homabay, Migori, Kisii, Nyamira, Siaya, Kakamega, Vihiga, Bungoma, Busia (Western/Nyanza);
+Nakuru, Nandi, Uasin Gishu, Trans Nzoia, West Pokot, Samburu, Laikipia, Baringo (Rift Valley);
+Mombasa, Kilifi, Kwale, Taita-Taveta, Lamu, Tana River (Coast);
+Garissa, Wajir, Mandera, Turkana, Marsabit, Isiolo (Northern Kenya);
+Embu, Tharaka-Nithi, Meru, Kitui, Makueni (Eastern Kenya).
+
+Nairobi headquarters. Nanyuki branch office for fast response across Central Kenya, Rift Valley, and northern counties.
