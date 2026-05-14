@@ -5,9 +5,9 @@ export const BRAND = {
 };
 
 export const TRUST_STATS = [
-  { value: '60%', label: 'Average Electricity Savings' },
-  { value: '1,400+', label: 'School Installations' },
-  { value: '47', label: 'Counties Covered' },
+  { value: '60%–80%', label: 'Average Electricity Savings' },
+  { value: '1,400+', label: 'Installations' },
+  { value: '38', label: 'Counties Covered' },
   { value: 'Public & Private', label: 'Schools Served' },
   { value: 'Day & Boarding', label: 'School Types' },
   { value: 'Est. 2018', label: 'Years of Experience' },
@@ -26,10 +26,10 @@ export const VALUE_PROPS = [
   {
     icon: 'bi-piggy-bank',
     iconBg: '#eef0ff',
-    title: '60% Average Savings',
+    title: '60%–80% Average Savings',
     description:
-      'Most schools reduce their KPLC bill by 55–65% from day one. Redirect those savings back into learning — books, desks, labs, and qualified teachers.',
-    stat: '55–65%',
+      'Most schools reduce their KPLC bill by 60%–80% from day one. Redirect those savings back into learning — books, desks, labs, and qualified teachers.',
+    stat: '60%–80%',
     statLabel: 'bill reduction from day one',
   },
   {
@@ -199,9 +199,9 @@ export const SCHOOL_TYPES = [
 export const WHY_WATERLIFT = [
   {
     icon: 'bi-geo-alt',
-    title: 'Built for Kenya — All 47 Counties',
+    title: 'Built for Kenya — 38 Counties Served',
     description:
-      '1,400+ installations across every Kenyan county from Turkana to Mombasa. Local technicians based in your region. Nairobi headquarters and Nanyuki branch for fast response times across Central Kenya, the Rift Valley, and northern counties.',
+      '1,400+ installations across 38 counties from Turkana to Mombasa. Local technicians based in your region. Nairobi headquarters and Nanyuki branch for fast response times across Central Kenya, the Rift Valley, and northern counties.',
   },
   {
     icon: 'bi-wrench-adjustable-circle',
@@ -337,13 +337,12 @@ export const FALLBACK_FAQS = [
 ];
 
 export const CONTACT = {
-  phone: '+254 700 000 000',
-  email: 'schools@waterliftsolarsavings.africa',
-  address: 'Nairobi, Kenya',
-  addressBranch: 'Nanyuki, Kenya (Branch Office)',
-  whatsapp: import.meta.env.VITE_WHATSAPP_NUMBER || '254700000000',
+  phone: '+254 768 117 070',
+  email: 'info@waterlift.co.ke',
+  address: 'Kenafric Business Park Godown B13, Baba Dogo, Nairobi 00603, Kenya',
+  addressBranch: 'Waterlift Building, Opposite Trendz Lounge, Along Nyeri-Nanyuki Highway, Nanyuki, Laikipia 10400, Kenya',
+  whatsapp: import.meta.env.VITE_WHATSAPP_NUMBER || '254768117070',
   responseTime: 'Within 24 hours, Monday to Saturday',
   website: 'waterliftsolarsavings.africa',
-  company: 'Mugumo Capital Partners Limited',
-  ceo: 'Michael Waithaka',
+  company: 'Waterlift Solar Limited',
 };

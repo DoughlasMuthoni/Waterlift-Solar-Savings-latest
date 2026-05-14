@@ -51,10 +51,10 @@ export default function Footer() {
               />
             </div>
             <p style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.45)', marginBottom: '4px' }}>
-              A division of {C.company}
+              Waterlift Solar Savings is a specialized service of {C.company}
             </p>
             <p style={{ fontSize: '0.9rem', lineHeight: 1.7, color: 'rgba(255,255,255,0.6)', maxWidth: 320, marginBottom: '20px' }}>
-              Solar power solutions designed specifically for Kenyan schools. Zero upfront cost. 1,400+ installations across all 47 counties. Saving schools money since 2018.
+              Solar power solutions designed specifically for Kenyan schools. Zero upfront cost. 1,400+ installations across 38 counties. Saving schools money since 2018.
             </p>
 
             {/* Social */}
@@ -182,19 +182,23 @@ export default function Footer() {
           <div className="row g-2 align-items-center">
             <div className="col-12 col-md-7">
               <p className="mb-1" style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.35)' }}>
-                Waterlift Solar Savings is a division of {C.company}. CEO: {C.ceo}. Registered in Kenya.
+                Waterlift Solar Savings is a specialized service of {C.company}. Registered in Kenya.
               </p>
               <p className="mb-0" style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.28)' }}>
                 © {year} {C.company}. All Rights Reserved.
               </p>
             </div>
             <div className="col-12 col-md-5 d-flex gap-3 justify-content-md-end flex-wrap">
-              {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((l) => (
-                <a key={l} href="#" style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.78rem', textDecoration: 'none' }}
+              {[
+                { label: 'About Us', href: '/about' },
+                { label: 'Privacy Policy', href: '/privacy-policy' },
+                { label: 'Terms of Service', href: '/terms' },
+              ].map((l) => (
+                <a key={l.label} href={l.href} style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.78rem', textDecoration: 'none' }}
                   onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--color-accent)'; }}
                   onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.35)'; }}
                 >
-                  {l}
+                  {l.label}
                 </a>
               ))}
             </div>

@@ -3,13 +3,23 @@ import { useSettings } from '../context/SettingsContext';
 import heroBg from '../assets/picture/hero-section-image.png';
 
 const HERO_TILES = [
-  { icon: 'bi-cash-stack',       label: 'No Upfront Costs' },
-  { icon: 'bi-piggy-bank',       label: 'Savings Every Month' },
-  { icon: 'bi-headset',          label: '24/7 Support' },
-  { icon: 'bi-phone',            label: 'Mobile Monitoring' },
-  { icon: 'bi-tools',            label: 'All Maintenance Included' },
-  { icon: 'bi-shield-check',     label: 'Compliance Certificate' },
-  { icon: 'bi-calendar-check',   label: 'Month-to-Month Contract' },
+  { icon: 'bi-cash-stack',     label: 'No Upfront Costs' },
+  { icon: 'bi-piggy-bank',     label: 'Savings Every Month' },
+  { icon: 'bi-headset',        label: '24/7 Support' },
+  { icon: 'bi-phone',          label: 'Mobile Monitoring' },
+  { icon: 'bi-tools',          label: 'All Maintenance Included' },
+  { icon: 'bi-shield-check',   label: 'Completion Certificate' },
+  { icon: 'bi-calendar-check', label: 'Month-to-Month Contract' },
+];
+
+const TILE_TOP_BARS = [
+  'linear-gradient(90deg, #262161, #3730a3)',
+  'linear-gradient(90deg, #EF6922, #f5883f)',
+  'linear-gradient(90deg, #262161, #EF6922)',
+  'linear-gradient(90deg, #EF6922, #262161)',
+  'linear-gradient(90deg, #3730a3, #262161)',
+  'linear-gradient(90deg, #f5883f, #EF6922)',
+  'linear-gradient(90deg, #262161, #EF6922)',
 ];
 
 export default function HeroSection() {
@@ -30,17 +40,16 @@ export default function HeroSection() {
         overflow: 'hidden',
       }}
     >
-      {/* Animated Ken Burns background */}
+      {/* Static background */}
       <div
         aria-hidden="true"
         style={{
           position: 'absolute',
-          inset: '-8%',
+          inset: 0,
           backgroundImage: `url(${heroBg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          animation: 'heroBgZoom 22s ease-in-out infinite alternate',
           zIndex: 0,
         }}
       />
@@ -50,7 +59,7 @@ export default function HeroSection() {
         aria-hidden="true"
         style={{
           position: 'absolute', inset: 0,
-          background: 'linear-gradient(160deg, rgba(26,23,69,0.78) 0%, rgba(38,33,97,0.72) 45%, rgba(15,14,46,0.85) 100%)',
+          background: 'linear-gradient(160deg, rgba(26,23,69,0.42) 0%, rgba(38,33,97,0.36) 45%, rgba(15,14,46,0.50) 100%)',
           zIndex: 1,
         }}
       />
@@ -68,12 +77,10 @@ export default function HeroSection() {
         }}
       />
 
-      {/* ═══════════════════════════════════════════════════
-           ☀️  SOLAR ENERGY SYSTEM — Full creative animation
-          ═══════════════════════════════════════════════════ */}
+      {/* ═══ ☀️  SUN ANIMATION ═══ */}
       <div aria-hidden="true" style={{ position: 'absolute', inset: 0, zIndex: 3, pointerEvents: 'none', overflow: 'hidden' }}>
 
-        {/* ── Sun anchor (top-right) ── */}
+        {/* Sun anchor (top-right) */}
         <div style={{ position: 'absolute', top: '7%', right: '11%' }}>
 
           {/* Far atmospheric corona */}
@@ -94,7 +101,7 @@ export default function HeroSection() {
             animation: 'midCorona 3.8s ease-in-out infinite',
           }} />
 
-          {/* Outer ring pulse */}
+          {/* Outer ring pulses */}
           <div style={{
             position: 'absolute', top: '50%', left: '50%',
             width: 110, height: 110, borderRadius: '50%',
@@ -110,7 +117,7 @@ export default function HeroSection() {
             animation: 'ringPulse 3s ease-out infinite 1s',
           }} />
 
-          {/* Sun core — white-hot centre */}
+          {/* Sun core */}
           <div style={{
             position: 'relative', width: 70, height: 70, borderRadius: '50%',
             background: 'radial-gradient(circle, #ffffff 0%, #fffaaa 18%, #ffd230 50%, rgba(255,140,20,0.75) 80%, transparent 100%)',
@@ -157,26 +164,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* ── Lens flare chain (along sun → bottom-left diagonal) ── */}
-        {[
-          { t:'16%', r:'22%', s:28,  c:'rgba(255,245,180,0.22)', d:0   },
-          { t:'24%', r:'33%', s:14,  c:'rgba(200,235,255,0.28)', d:0.4 },
-          { t:'32%', r:'44%', s:54,  c:'rgba(255,215,90,0.10)',  d:0.8, ring:true },
-          { t:'40%', r:'55%', s:10,  c:'rgba(255,200,80,0.35)',  d:1.2 },
-          { t:'48%', r:'66%', s:38,  c:'rgba(180,215,255,0.14)', d:1.6, ring:true },
-          { t:'56%', r:'77%', s:18,  c:'rgba(255,240,130,0.20)', d:2.0 },
-        ].map((f, i) => (
-          <div key={i} style={{
-            position: 'absolute', top: f.t, right: f.r,
-            width: f.s, height: f.s, borderRadius: '50%',
-            background: f.ring ? 'transparent' : f.c,
-            border: f.ring ? `1px solid ${f.c}` : 'none',
-            animation: `flare${(i % 3) + 1} 5s ease-in-out infinite ${f.d}s`,
-            transform: 'translate(50%, -50%)',
-          }} />
-        ))}
-
-        {/* ── Energy photon particles streaming from sun ── */}
+        {/* Photon particles streaming from sun */}
         {Array.from({ length: 22 }).map((_, i) => {
           const angle = (i * 137.5) % 360;
           const rad = angle * Math.PI / 180;
@@ -184,14 +172,15 @@ export default function HeroSection() {
           const dy = Math.round(Math.sin(rad) * (80 + (i % 5) * 60) + 60);
           const size = 2 + (i % 3);
           const delay = i * 0.28;
-          const r = 255, g = 180 + (i % 4) * 18, b = 30 + i * 8;
+          const g = 180 + (i % 4) * 18;
+          const b = Math.min(30 + i * 8, 200);
           return (
             <div key={i} style={{
               position: 'absolute',
               top: '7%', right: '11%',
               width: size, height: size,
               borderRadius: '50%',
-              background: `rgba(${r},${g},${Math.min(b,200)},0.9)`,
+              background: `rgba(255,${g},${b},0.9)`,
               boxShadow: `0 0 ${size * 2}px rgba(255,200,60,0.6)`,
               animation: `photon 1s ease-out infinite ${delay}s`,
               '--pdx': `${dx}px`,
@@ -200,63 +189,23 @@ export default function HeroSection() {
           );
         })}
 
-        {/* ── Light beams radiating from sun corner ── */}
+        {/* Light beams radiating from sun */}
         {[
-          { rotate: 32,  h: '62%', opacity: 0.38, delay: '0s'   },
-          { rotate: 18,  h: '50%', opacity: 0.22, delay: '0.8s' },
-          { rotate: 48,  h: '45%', opacity: 0.18, delay: '1.6s' },
-        ].map((b, i) => (
+          { rotate: 32, h: '62%', opacity: 0.38, delay: '0s'   },
+          { rotate: 18, h: '50%', opacity: 0.22, delay: '0.8s' },
+          { rotate: 48, h: '45%', opacity: 0.18, delay: '1.6s' },
+        ].map((bm, i) => (
           <div key={i} style={{
             position: 'absolute', top: '7%', right: '11%',
-            width: 3, height: b.h,
-            background: `linear-gradient(to bottom, rgba(255,225,70,${b.opacity}) 0%, transparent 100%)`,
+            width: 3, height: bm.h,
+            background: `linear-gradient(to bottom, rgba(255,225,70,${bm.opacity}) 0%, transparent 100%)`,
             transformOrigin: 'top right',
-            transform: `rotate(${b.rotate}deg)`,
-            animation: `beamPulse 4s ease-in-out infinite ${b.delay}`,
+            transform: `rotate(${bm.rotate}deg)`,
+            animation: `beamPulse 4s ease-in-out infinite ${bm.delay}`,
             borderRadius: 4,
             filter: 'blur(3px)',
           }} />
         ))}
-
-        {/* ── Panel glint — horizontal shimmer on solar panel roof area ── */}
-        {/* Main bright glint sweep across panels */}
-        <div style={{
-          position: 'absolute', top: '52%', left: '8%', right: '8%', height: 3,
-          background: 'linear-gradient(to right, transparent 0%, rgba(255,235,100,0.0) 15%, rgba(255,255,255,0.70) 50%, rgba(255,235,100,0.0) 85%, transparent 100%)',
-          borderRadius: 4, filter: 'blur(1.5px)',
-          animation: 'panelGlint 4.5s ease-in-out infinite',
-        }} />
-        {/* Secondary glint — slightly lower row of panels */}
-        <div style={{
-          position: 'absolute', top: '57%', left: '18%', right: '18%', height: 2,
-          background: 'linear-gradient(to right, transparent, rgba(255,220,80,0.55), transparent)',
-          borderRadius: 4, filter: 'blur(1px)',
-          animation: 'panelGlint 4.5s ease-in-out infinite 2.2s',
-        }} />
-        {/* Tertiary glint — right wing of roof */}
-        <div style={{
-          position: 'absolute', top: '54%', right: '5%', width: '30%', height: 2,
-          background: 'linear-gradient(to right, transparent, rgba(255,240,120,0.45), transparent)',
-          borderRadius: 4, filter: 'blur(1px)',
-          animation: 'panelGlint 4.5s ease-in-out infinite 3.8s',
-        }} />
-        {/* Diffuse panel glow — warm reflection over roof zone */}
-        <div style={{
-          position: 'absolute', top: '44%', left: '5%', right: '5%', height: '24%',
-          background: 'radial-gradient(ellipse at 50% 40%, rgba(255,215,60,0.10) 0%, rgba(255,160,20,0.05) 50%, transparent 75%)',
-          pointerEvents: 'none',
-          animation: 'panelGlow 6s ease-in-out infinite',
-        }} />
-
-        {/* ── Wide diagonal light sweep across panels ── */}
-        <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
-          <div style={{
-            position: 'absolute', top: 0, bottom: 0, width: '28%',
-            background: 'linear-gradient(108deg, transparent 0%, rgba(255,220,80,0.035) 38%, rgba(255,255,255,0.08) 50%, rgba(255,220,80,0.035) 62%, transparent 100%)',
-            animation: 'lightSweep 11s ease-in-out infinite',
-            transform: 'skewX(-14deg)',
-          }} />
-        </div>
 
       </div>
 
@@ -283,7 +232,7 @@ export default function HeroSection() {
             Kenya's School Solar Specialists — Est. 2018
           </span>
 
-          {/* Headline with gradient on key word */}
+          {/* Headline */}
           <h1
             className="text-white fw-800 mb-4"
             style={{
@@ -314,7 +263,7 @@ export default function HeroSection() {
             className="mb-5 mx-auto"
             style={{
               fontSize: 'clamp(1rem, 2.2vw, 1.18rem)',
-              color: 'rgba(255,255,255,0.80)',
+              color: 'rgba(255,255,255,0.85)',
               maxWidth: '620px',
               lineHeight: 1.8,
             }}
@@ -345,51 +294,64 @@ export default function HeroSection() {
 
         {/* Tiles label */}
         <div className="text-center mb-4">
-          <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.78rem', letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600 }}>
+          <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.78rem', letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600 }}>
             Everything your school needs
           </p>
         </div>
 
-        {/* Feature tiles */}
-        <div ref={tilesRef} className="row row-cols-2 row-cols-sm-4 g-3 stagger-children justify-content-center">
+        {/* Feature tiles — sharp white cards */}
+        <div ref={tilesRef} className="row row-cols-2 row-cols-sm-4 g-3 stagger-children justify-content-center align-items-stretch">
           {HERO_TILES.map((tile, i) => (
-            <div className="col" key={i}>
+            <div className="col d-flex" key={i}>
               <div
-                className="fade-up text-center p-3 h-100"
+                className="fade-up text-center p-3 w-100"
                 style={{
-                  background: 'rgba(255,255,255,0.07)',
-                  border: '1px solid rgba(255,255,255,0.12)',
-                  backdropFilter: 'blur(12px)',
-                  WebkitBackdropFilter: 'blur(12px)',
+                  position: 'relative',
+                  background: 'linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(135deg, #262161, #EF6922) border-box',
+                  border: '1.5px solid transparent',
                   borderRadius: '14px',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.22), 0 1px 4px rgba(0,0,0,0.12)',
                   cursor: 'default',
-                  transition: 'background 0.3s ease, border-color 0.3s ease, transform 0.3s ease',
+                  overflow: 'hidden',
+                  transition: 'transform 0.28s ease, box-shadow 0.28s ease',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'rgba(239,105,34,0.13)';
-                  e.currentTarget.style.borderColor = 'rgba(239,105,34,0.45)';
-                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.transform = 'translateY(-6px)';
+                  e.currentTarget.style.boxShadow = '0 14px 36px rgba(0,0,0,0.28), 0 4px 12px rgba(239,105,34,0.18)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'rgba(255,255,255,0.07)';
-                  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)';
                   e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.22), 0 1px 4px rgba(0,0,0,0.12)';
                 }}
               >
+                {/* Top colour bar */}
+                <div style={{
+                  position: 'absolute', top: 0, left: 0, right: 0,
+                  height: '3px',
+                  background: TILE_TOP_BARS[i % TILE_TOP_BARS.length],
+                  borderRadius: '14px 14px 0 0',
+                }} />
+
+                {/* Icon box */}
                 <div
                   className="mx-auto mb-3 d-flex align-items-center justify-content-center"
                   style={{
                     width: 52, height: 52, borderRadius: '13px',
-                    background: 'rgba(239,105,34,0.18)',
-                    border: '1px solid rgba(239,105,34,0.32)',
+                    background: 'rgba(239,105,34,0.10)',
+                    border: '1.5px solid rgba(239,105,34,0.28)',
                   }}
                 >
                   <i className={`bi ${tile.icon}`} style={{ fontSize: '1.45rem', color: 'var(--color-accent)' }}></i>
                 </div>
+
                 <p style={{
-                  color: 'rgba(255,255,255,0.88)',
-                  fontSize: '0.77rem',
-                  fontWeight: 600,
+                  color: 'var(--color-primary)',
+                  fontSize: '0.78rem',
+                  fontWeight: 700,
                   lineHeight: 1.4,
                   margin: 0,
                   letterSpacing: '0.01em',
@@ -403,14 +365,13 @@ export default function HeroSection() {
 
         {/* Scroll cue */}
         <div className="text-center mt-5">
-          <a href="#trust" style={{ color: 'rgba(255,255,255,0.3)', textDecoration: 'none' }}>
+          <a href="#trust" style={{ color: 'rgba(255,255,255,0.35)', textDecoration: 'none' }}>
             <i className="bi bi-chevron-double-down d-block bounce-anim" style={{ fontSize: '1.3rem' }}></i>
           </a>
         </div>
       </div>
 
       <style>{`
-        /* ── Sun animations ── */
         @keyframes sunCore {
           0%,100% { box-shadow: 0 0 35px 14px rgba(255,215,50,0.75),0 0 90px 35px rgba(255,165,30,0.40),0 0 180px 70px rgba(255,110,10,0.18); transform:scale(1); }
           50%      { box-shadow: 0 0 55px 22px rgba(255,215,50,0.95),0 0 130px 55px rgba(255,165,30,0.60),0 0 260px 100px rgba(255,110,10,0.28); transform:scale(1.10); }
@@ -436,61 +397,19 @@ export default function HeroSection() {
           from { transform:translate(-50%,-50%) rotate(0deg); }
           to   { transform:translate(-50%,-50%) rotate(360deg); }
         }
-        /* ── Lens flare ── */
-        @keyframes flare1 {
-          0%,100% { opacity:0.25; transform:translate(50%,-50%) scale(1); }
-          50%      { opacity:0.85; transform:translate(50%,-50%) scale(1.35); }
-        }
-        @keyframes flare2 {
-          0%,100% { opacity:0.15; transform:translate(50%,-50%) scale(0.9); }
-          50%      { opacity:0.65; transform:translate(50%,-50%) scale(1.45); }
-        }
-        @keyframes flare3 {
-          0%,100% { opacity:0.20; transform:translate(50%,-50%) scale(1.05); }
-          50%      { opacity:0.55; transform:translate(50%,-50%) scale(0.85); }
-        }
-        /* ── Photon particles ── */
         @keyframes photon {
           0%   { transform:translate(0,0) scale(1);   opacity:0.95; }
           70%  { opacity:0.5; }
           100% { transform:translate(var(--pdx),var(--pdy)) scale(0); opacity:0; }
         }
-        /* ── Light beams ── */
         @keyframes beamPulse {
           0%,100% { opacity:0.4; }
           50%      { opacity:1;   }
-        }
-        /* ── Panel glint ── */
-        @keyframes panelGlint {
-          0%,25%,100% { opacity:0; transform:scaleX(0.5); }
-          50%          { opacity:1; transform:scaleX(1.2); }
-          78%          { opacity:0.25; transform:scaleX(1.05); }
-        }
-        @keyframes panelGlow {
-          0%,100% { opacity:0.4; }
-          50%      { opacity:1; }
-        }
-        /* ── Wide sweep ── */
-        @keyframes lightSweep {
-          0%   { left:-35%; opacity:0; }
-          8%   { opacity:1; }
-          88%  { opacity:1; }
-          100% { left:140%; opacity:0; }
-        }
-        @keyframes heroBgZoom {
-          0%   { transform: scale(1)    translateX(0px)    translateY(0px); }
-          25%  { transform: scale(1.06) translateX(-12px)  translateY(-8px); }
-          50%  { transform: scale(1.10) translateX(8px)    translateY(-4px); }
-          75%  { transform: scale(1.06) translateX(4px)    translateY(8px); }
-          100% { transform: scale(1.04) translateX(-4px)   translateY(4px); }
         }
         @keyframes gradientShift {
           0%   { background-position: 0%   50%; }
           50%  { background-position: 100% 50%; }
           100% { background-position: 0%   50%; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-          [style*="heroBgZoom"] { animation: none !important; }
         }
       `}</style>
     </section>

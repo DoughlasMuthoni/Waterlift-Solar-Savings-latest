@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import api from '../utils/api';
 import { CONTACT } from '../utils/constants';
@@ -21,6 +22,7 @@ const INITIAL = {
 
 export default function ContactSection() {
   const titleRef = useScrollReveal();
+  const navigate = useNavigate();
   const liveSettings = useSettings();
   const C = { ...CONTACT, ...liveSettings };
   const [form, setForm] = useState(INITIAL);
@@ -52,41 +54,13 @@ export default function ContactSection() {
     setServerError('');
     try {
       await api.post('/api/leads', form);
-      setStatus('success');
       setForm(INITIAL);
+      navigate('/thank-you');
     } catch (err) {
       setStatus('error');
       setServerError(err.response?.data?.message || 'Something went wrong. Please try again.');
     }
   };
-
-  if (status === 'success') {
-    return (
-      <section id="contact" className="section-py bg-light-brand">
-        <div className="container">
-          <div className="text-center py-5">
-            <div
-              className="mx-auto mb-4 d-flex align-items-center justify-content-center"
-              style={{ width: 80, height: 80, borderRadius: '50%', background: 'rgba(38,33,97,0.08)' }}
-            >
-              <i className="bi bi-check-circle-fill" style={{ fontSize: '2.5rem', color: 'var(--color-primary)' }}></i>
-            </div>
-            <h3 className="fw-700 mb-3" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>Thank You!</h3>
-            <p className="mb-4" style={{ color: 'var(--color-gray)', maxWidth: 480, margin: '0 auto 1.5rem' }}>
-              A Waterlift Solar specialist will contact you within 24 hours to schedule your free school energy audit.
-            </p>
-            <button
-              className="btn-brand-accent"
-              style={{ padding: '12px 28px', borderRadius: '8px', cursor: 'pointer', border: 'none' }}
-              onClick={() => setStatus('idle')}
-            >
-              Submit Another Request
-            </button>
-          </div>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section id="contact" className="section-py bg-light-brand">
@@ -265,7 +239,11 @@ export default function ContactSection() {
                     </button>
                     <p className="text-center mt-3 mb-0" style={{ color: 'var(--color-gray)', fontSize: '0.82rem' }}>
                       <i className="bi bi-lock me-1"></i>
-                      Your information is private and will never be shared with third parties.
+                      Your information is private and will never be shared with third parties.{' '}
+                      By submitting, you agree to our{' '}
+                      <a href="/privacy-policy" style={{ color: 'var(--color-accent)', textDecoration: 'underline' }}>Privacy Policy</a>
+                      {' '}and{' '}
+                      <a href="/terms" style={{ color: 'var(--color-accent)', textDecoration: 'underline' }}>Terms of Service</a>.
                     </p>
                   </div>
                 </div>

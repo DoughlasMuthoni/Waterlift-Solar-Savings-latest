@@ -16,8 +16,8 @@ const DEFAULTS = {
   email:          CONTACT.email,
   address:        CONTACT.address,
   address_branch: CONTACT.addressBranch || '',
-  hero_headline:  "Cut Your School's Power Bills by Up to 60%",
-  hero_subtext:   'Zero upfront cost. Solar energy and water infrastructure built specifically for Kenyan schools. 1,400+ installations across all 47 counties.',
+  hero_headline:  "Cut Your School's Power Bills by Up to 80%",
+  hero_subtext:   'Zero upfront cost. Solar energy and water infrastructure built specifically for Kenyan schools. 1,400+ installations across 38 counties.',
 };
 
 const SettingsContext = createContext(DEFAULTS);

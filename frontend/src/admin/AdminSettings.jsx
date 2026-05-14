@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import api from '../utils/api';
 
 const SITE_FIELDS = [
-  { key: 'phone', label: 'Phone Number', type: 'text', placeholder: '+254 700 000 000' },
-  { key: 'whatsapp', label: 'WhatsApp Number', type: 'text', placeholder: '254700000000 (no +)' },
-  { key: 'email', label: 'Contact Email', type: 'email', placeholder: 'info@waterliftsolar.co.ke' },
+  { key: 'phone', label: 'Phone Number', type: 'text', placeholder: '+254 768 117 070' },
+  { key: 'whatsapp', label: 'WhatsApp Number', type: 'text', placeholder: '254768117070 (no +)' },
+  { key: 'email', label: 'Contact Email', type: 'email', placeholder: 'info@waterlift.co.ke' },
   { key: 'address', label: 'Address', type: 'text', placeholder: 'Nairobi, Kenya' },
   { key: 'hero_headline', label: 'Hero Headline', type: 'text', placeholder: 'Cut Your School\'s Power Bills by Up to 80%' },
   { key: 'hero_subtext', label: 'Hero Subtext', type: 'textarea', placeholder: 'Supporting subheadline text...' },
